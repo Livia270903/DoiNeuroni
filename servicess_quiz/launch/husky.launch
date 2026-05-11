@@ -1,0 +1,10 @@
+<launch>
+  <!-- Simularea Husky in Gazebo -->
+  <include file="$(find husky_gazebo)/launch/empty_world.launch"/>
+
+  <!-- Service server -->
+  <node pkg="husky_pkg"
+        type="husky_move_server.py"
+        name="husky_move_server"
+        output="screen"/>
+</launch>
